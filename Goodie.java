@@ -1,0 +1,32 @@
+public class Goodie{
+    private double xPosition;
+    private double yPosition;
+    private Rectangle goodGuy;
+    /**Constructer method
+    *@param x takes the x position
+    *@param y takes the y position
+    */
+    public Goodie(double x, double y){
+        xPosition = x;
+        yPosition = y;
+        goodGuy = new Rectangle(x, y, 300, 150, "GREEN");
+    }
+    /**@param g Makes the game arena */
+
+    public addTo(GameArena g) {
+        g.addRectangle(goodGuy);
+    }
+    /**
+     * Reads y and x position and sets new position
+     * @param x gets input position to move forward or back
+     * @param y gets input to move up or down
+     */
+    public move(double x, double y){
+        double yPos = goodGuy.getYPosition();
+        double xPos = goodGuy.getXPosition();
+        yPos = yPos+x;
+        xPos = xPos+y;
+        goodGuy.setYPosition(yPos);
+        goodGuy.setXPosition(xPos);
+    }
+}
