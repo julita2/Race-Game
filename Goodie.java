@@ -22,11 +22,11 @@ public class Goodie{
      * @param y gets input to move up or down
      */
     public move(double x, double y){
-        double yPos = goodGuy.getYPosition();
-        double xPos = goodGuy.getXPosition();
+        double yPos = goodGuy.yPosition;
+        double xPos = goodGuy.xPosition;
         yPos = yPos+x;
         xPos = xPos+y;
-        goodGuy.setYPosition(yPos);
-        goodGuy.setXPosition(xPos);
+        yPosition = yPos;
+        xPosition = xPos;
     }
 }
