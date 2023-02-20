@@ -24,9 +24,15 @@ public class Goodie{
     public move(double x, double y){
         double yPos = goodGuy.yPosition;
         double xPos = goodGuy.xPosition;
-        yPos = yPos+x;
-        xPos = xPos+y;
+        yPos = yPos+y;
+        xPos = xPos+x;
         yPosition = yPos;
         xPosition = xPos;
+        if(yPosition == 600){
+            yPosition = 0;
+        }
+        if(xPosition == 600){
+            xPosition = 0;
+        }
     }
 }
