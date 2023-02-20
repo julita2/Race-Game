@@ -23,7 +23,7 @@ public class Baddie
 /**
  * gets random number 0-2, each corresponds to a row
 **/
-    public randomStartPosition()
+    public int randomStartPosition()
     {
         Random rand = new Random(); 
         int upperbound =3;
