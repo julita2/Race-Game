@@ -26,7 +26,7 @@ public class Goodie{
     public void moveUp(double y){
         double yPos = goodGuy.getYPosition();
         yPos = yPos + y;
-        yPosition = yPos;
+        goodGuy.setYPosition(yPos);
 
         if(yPosition == 600){
             yPosition = 0;
@@ -35,24 +35,9 @@ public class Goodie{
     public void moveDown(double y){
         double yPos = goodGuy.getYPosition();
         yPos = yPos - y;
-        yPosition = yPos;
+        goodGuy.setYPosition(yPos);
         if(yPosition == 600 || yPosition == 0){
             yPosition = 0;
-        }
-    }
-
-    public void move(double x, double y){
-        double yPos = goodGuy.getYPosition();
-        double xPos = goodGuy.getXPosition();
-        yPos = yPos+y;
-        xPos = xPos+x;
-        yPosition = yPos;
-        xPosition = xPos;
-        if(yPosition == 600){
-            yPosition = 0;
-        }
-        if(xPosition == 600){
-            xPosition = 0;
         }
     }
 }
