@@ -31,4 +31,19 @@ public class Baddie
         return int_random;
     }
 
+    public void resetPosition(int x ,int y)
+    {
+        //Baddie[] baddieArray = new Baddie[]
+        badGuy.setXPosition(x);
+    }
+
+    public boolean reachedEnd()
+    {
+        if (badguy.getXPosition()==-150)
+        {
+            return true;
+        }
+
+    }
+
 }
