@@ -28,16 +28,16 @@ public class Goodie{
         yPos = yPos + y;
         goodGuy.setYPosition(yPos);
 
-        if(yPosition == 600){
-            yPosition = 0;
+        if(goodGuy.getYPosition() == 600){
+            goodGuy.setYPosition(0);
         }    
     }
     public void moveDown(double y){
         double yPos = goodGuy.getYPosition();
         yPos = yPos - y;
         goodGuy.setYPosition(yPos);
-        if(yPosition == 600 || yPosition == 0){
-            yPosition = 0;
+        if(goodGuy.getYPosition() == 600 || goodGuy.getYPosition()== 0){
+            goodGuy.setYPosition(0);
         }
     }
 }
