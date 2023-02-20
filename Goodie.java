@@ -6,14 +6,14 @@ public class Goodie{
     *@param x takes the x position
     *@param y takes the y position
     */
-    public Goodie(double x, double y){
+    public void Goodie(double x, double y){
         xPosition = x;
         yPosition = y;
         goodGuy = new Rectangle(xPosition, yPosition, 300, 150, "GREEN");
     }
     /**@param g Makes the game arena */
 
-    public addTo(GameArena g) {
+    public void addTo(GameArena g) {
         g.addRectangle(goodGuy);
     }
     /**
@@ -23,31 +23,31 @@ public class Goodie{
      * @param y gets input to move up or down
      */
 
-    public moveUp(double y){
-        double yPos = goodGuy.yPosition;
+    public void moveUp(double y){
+        double yPos = goodGuy.getYPosition();
         yPos = yPos + y;
-        yPosition = yPos;
+        goodGuy.setYPosition(yPos);
 
         if(yPosition == 600){
             yPosition = 0;
         }    
     }
-    public moveDown(double y){
-        double yPos = goodGuy.yPosition;
+    public void moveDown(double y){
+        double yPos = goodGuy.getYPosition();
         yPos = yPos - y;
-        yPosition = yPos;
+        goodGuy.setYPosition(yPos);
         if(yPosition == 600 || yPosition == 0){
             yPosition = 0;
         }
     }
 
-    public move(double x, double y){
-        double yPos = goodGuy.yPosition;
-        double xPos = goodGuy.xPosition;
+    public void move(double x, double y){
+        double yPos = goodGuy.getYPosition;
+        double xPos = goodGuy.getXPosition;
         yPos = yPos+y;
         xPos = xPos+x;
-        yPosition = yPos;
-        xPosition = xPos;
+        goodGuy.getYPosition(yPos);
+        goodGuy.getXPosition(xPos); 
         if(yPosition == 600){
             yPosition = 0;
         }
