@@ -40,24 +40,4 @@ public class Goodie{
             yPosition = 0;
         }
     }
-
-    public void move(double x, double y){
-<<<<<<< HEAD
-        double yPos = goodGuy.getYPosition;
-        double xPos = goodGuy.getXPosition;
-=======
-        double yPos = goodGuy.getYPosition();
-        double xPos = goodGuy.getXPosition();
->>>>>>> 0a4c58377b03f69f67dfc2879d44ce7adeb6f5b3
-        yPos = yPos+y;
-        xPos = xPos+x;
-        goodGuy.getYPosition(yPos);
-        goodGuy.getXPosition(xPos); 
-        if(yPosition == 600){
-            yPosition = 0;
-        }
-        if(xPosition == 600){
-            xPosition = 0;
-        }
-    }
 }
