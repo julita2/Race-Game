@@ -9,7 +9,7 @@ public class Goodie{
     public Goodie(double x, double y){
         xPosition = x;
         yPosition = y;
-        goodGuy = new Rectangle(x, y, 300, 150, "GREEN");
+        goodGuy = new Rectangle(xPosition, yPosition, 300, 150, "GREEN");
     }
     /**@param g Makes the game arena */
 
@@ -17,10 +17,30 @@ public class Goodie{
         g.addRectangle(goodGuy);
     }
     /**
+     *
      * Reads y and x position and sets new position
      * @param x gets input position to move forward or back
      * @param y gets input to move up or down
      */
+
+    public moveUp(double y){
+        double yPos = goodGuy.yPosition;
+        yPos = yPos + y;
+        yPosition = yPos;
+
+        if(yPosition == 600){
+            yPosition = 0;
+        }    
+    }
+    public moveDown(double y){
+        double yPos = goodGuy.yPosition;
+        yPos = yPos - y;
+        yPosition = yPos;
+        if(yPosition == 600 || yPosition == 0){
+            yPosition = 0;
+        }
+    }
+
     public move(double x, double y){
         double yPos = goodGuy.yPosition;
         double xPos = goodGuy.xPosition;
