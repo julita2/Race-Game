@@ -11,20 +11,33 @@ public class RunCarGame
 
         Baddie[] baddies= new Baddie[3];
 
-        baddies[0]= new Baddie(750,450);
-        baddies[1]= new Baddie(300,500);
-        baddies[2]= new Baddie(450,500);
-        
+        baddies[0]= new Baddie(750,100);
+        baddies[1]= new Baddie(750,300);
+        baddies[2]= new Baddie(750,500);
 
-        baddies[0]= new Baddie(750,450);
-        baddies[1]= new Baddie(300,500);
-        baddies[2]= new Baddie(450,500);
+        if (baddies[0].reachedEnd())
+        {
+        baddies[0].resetPosition(750);
+        }
+
+        if (baddies[0].reachedEnd())
+        {
+        baddies[0].resetPosition(750);
+        }
+
+        if (baddies[0].reachedEnd())
+        {
+        baddies[0].resetPosition(750);
+        }
 
         //if(baddies[0].carCollide)
         //{
             //game ends
         //}
 
+       //if xpos is equal to 0
+        resetPosition(baddies[i], )
+        
         if (baddies[0].getXPosition()== 0)
         {
             baddies[0].setXPosition(750);
@@ -42,7 +55,7 @@ public class RunCarGame
             baddies[2].setXPosition(450);
             baddies[2].setYPosition(500);
         }
-        while(baddies[0].getXPosition()!=-150)
+        while(baddies[0].getXPosition!=-150)
         {
             baddies[0].moveBaddie(-1);//moves left one
         }
